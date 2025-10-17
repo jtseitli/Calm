@@ -14,7 +14,6 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 20px 60px;
   position: absolute;
   width: 100%;
@@ -63,6 +62,18 @@ body {
   font-weight: 500;
   cursor: pointer;
 }
+/* SECONDARY PAGE NAVBAR */
+.navbar-secondary {
+  position: fixed; 
+  background: white;
+  color: black;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.navbar-secondary a {
+  color: black;
+}
+
 
 /* HERO SECTION */
 .hero {

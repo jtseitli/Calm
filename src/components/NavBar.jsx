@@ -1,10 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 function NavBar({ onLoginClick }) {
+  const location = useLocation();
+  const isLanding = location.pathname === "/";
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${!isLanding ? "navbar-secondary" : ""}`}>
       <div className="nav-left">
         <Link to="/">
           <img src={logo} alt="Calm Logo" className="logo" />
