@@ -24,4 +24,5 @@ function Hero({ onLoginClick }) {
     </section>
   );
 }
+
 export default Hero;
