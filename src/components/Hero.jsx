@@ -25,4 +25,5 @@ function Hero({ onLoginClick }) {
   );
 }
 
+
 export default Hero;
