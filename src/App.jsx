@@ -47,7 +47,7 @@ function App() {
                 title="Be more mindful every day"
                 subtitle="Learn to focus, stay present, and find joy in everyday life with guided mindfulness sessions."
                 buttonText="Practice mindfulness"
-                image="/src/assets/lake.png"
+                image="/src/assets/midfulness.jpeg"
               />
             }
           />
