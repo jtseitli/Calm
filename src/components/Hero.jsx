@@ -13,7 +13,7 @@ function Hero({ onLoginClick }) {
         <h1>Calm your mind. Change your life.</h1>
         <p>The #1 app for sleep, meditation and relaxation</p>
         <div className="hero-buttons">
-          <button className="primary-btn" onClick={() => navigate("/sleep")}>
+          <button className="primary-btn" onClick={onLoginClick}>
             Try Calm for Free
           </button>
           <button className="secondary-btn" onClick={onLoginClick}>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function LoginModal({ onClose }) {
+function SignupModal({ onClose }) {
   return (
     <div className="modal-overlay">
       <div className="modal">
