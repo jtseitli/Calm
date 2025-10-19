@@ -18,7 +18,7 @@ function NavBar({ onLoginClick }) {
       </div>
       <div className="nav-right">
         <button className="nav-btn" onClick={onLoginClick}>Log In</button>
-        <button className="primary-btn">Try Calm for Free</button>
+        <button className="primary-btn" onClick={onLoginClick}>Try Calm for Free</button>
       </div>
     </nav>
   );
