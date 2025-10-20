@@ -180,6 +180,12 @@ body {
   object-fit: cover;
 }
 
+.mindfulness-page .primary-btn {
+  background: linear-gradient(135deg, #67b26f, #4ca2cd); 
+  color: white;
+  border: none;
+}
+
 /* MODAL */
 .modal-overlay {
   position: fixed;
@@ -196,9 +202,9 @@ body {
 
 .modal {
   background: #fff;
-  padding: 40px;
+  padding: 60px;
   border-radius: 16px;
-  width: 380px;
+  width: 50%;
   text-align: center;
   position: relative;
 }

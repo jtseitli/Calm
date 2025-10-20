@@ -1,14 +1,15 @@
 import React from "react";
 import PageLayout from "../components/PageLayout";
 
-function NavPage({ title, subtitle, buttonText, image }) {
+function NavPage({ title, subtitle, buttonText, image, className }) {
   return (
     <div>
       <PageLayout
         title={title}
         subtitle={subtitle}
-        buttonText={buttonText}
+        buttonText={buttonText} 
         image={image}
+        className={className} 
       />
     </div>
   );

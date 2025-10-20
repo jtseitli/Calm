@@ -2,24 +2,30 @@ import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom"; 
 import NavBar from "./components/NavBar";
 import LoginModal from "./components/LoginModal";
+import SignupModal from "./components/SignupModal";
 import Landing from "./pages/Landing";
 import NavPage from "./pages/NavPage";
 import sleepImg from "./assets/sleep.jpeg";
 import stressImg from "./assets/stress.jpeg";
 import mindfulnessImg from "./assets/midfulness.jpeg";
 
-
 function App() {
-  const [showModal, setShowModal] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);  
+  const [showSignup, setShowSignup] = useState(false); 
 
   return (
     <div className="app">
-      <NavBar onLoginClick={() => setShowModal(true)} />
+      <NavBar onLoginClick={() => setShowLogin(true)} />
 
       <Routes>
         <Route
           path="/"
-          element={<Landing onLoginClick={() => setShowModal(true)} />}
+          element={
+            <Landing
+              onLoginClick={() => setShowLogin(true)}  
+              onSignupClick={() => setShowSignup(true)}
+            />
+          }
         />
         <Route
           path="/sleep"
@@ -29,6 +35,7 @@ function App() {
               subtitle="Join millions of sound sleepers worldwide. Fall asleep easily and naturally with our Sleep Stories, sleep meditations, exclusive sleep music and sleep sounds. With hundreds of titles to choose from, you'll be drifting off to dreamland in no time. Just press play and drift away."
               buttonText="Sleep better for free"
               image={sleepImg}
+              className="sleep-page" 
             />
           }
         />
@@ -40,6 +47,7 @@ function App() {
               subtitle="Discover guided meditations and breathing exercises designed to help you stay balanced, even in stressful moments."
               buttonText="Relax now"
               image={stressImg}
+              className="stress-page" 
             />
           }
         />
@@ -51,12 +59,14 @@ function App() {
               subtitle="Learn to focus, stay present, and find joy in everyday life with guided mindfulness sessions."
               buttonText="Practice mindfulness"
               image={mindfulnessImg}
+              className="mindfulness-page" 
             />
           }
         />
       </Routes>
 
-      {showModal && <LoginModal onClose={() => setShowModal(false)} />}
+      {showLogin && <LoginModal onClose={() => setShowLogin(false)} />}
+      {showSignup && <SignupModal onClose={() => setShowSignup(false)} />}
     </div>
   );
 }

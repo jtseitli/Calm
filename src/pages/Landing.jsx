@@ -1,12 +1,8 @@
 import React from "react";
 import Hero from "../components/Hero";
 
-function Landing({ onLoginClick }) {
-  return (
-    <div>
-      <Hero onLoginClick={onLoginClick} />
-    </div>
-  );
+function Landing({ onLoginClick, onSignupClick }) {
+  return <Hero onLoginClick={onLoginClick} onSignupClick={onSignupClick} />;
 }
-
 export default Landing;
+

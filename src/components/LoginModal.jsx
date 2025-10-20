@@ -5,7 +5,7 @@ function LoginModal({ onClose }) {
     <div className="modal-overlay">
       <div className="modal">
         <button className="close-btn" onClick={onClose}>✕</button>
-        <h2>Log into your account</h2>
+        <h2 style={{ paddingBottom: "16px" }}>Login to your account</h2>
 
         <button className="login-option email">Sign in with Email</button>
         <button className="login-option fb">Sign in with Facebook</button>

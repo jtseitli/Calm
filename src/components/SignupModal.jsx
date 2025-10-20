@@ -5,7 +5,7 @@ function SignupModal({ onClose }) {
     <div className="modal-overlay">
       <div className="modal">
         <button className="close-btn" onClick={onClose}>✕</button>
-        <h2>Create a free account</h2>
+        <h2 style={{ paddingBottom: "16px" }}>Create a free account</h2>
 
         <button className="login-option email">Continue with Email</button>
         <button className="login-option fb">Continue with Facebook</button>

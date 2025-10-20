@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import lake from "../assets/lake.jpeg";
 
-function Hero({ onLoginClick }) {
+function Hero({ onLoginClick, onSignupClick }) {
   const navigate = useNavigate();
 
   return (
@@ -13,7 +13,7 @@ function Hero({ onLoginClick }) {
         <h1>Calm your mind. Change your life.</h1>
         <p>The #1 app for sleep, meditation and relaxation</p>
         <div className="hero-buttons">
-          <button className="primary-btn" onClick={onLoginClick}>
+          <button className="primary-btn" onClick={onSignupClick}>
             Try Calm for Free
           </button>
           <button className="secondary-btn" onClick={onLoginClick}>

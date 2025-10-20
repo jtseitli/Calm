@@ -1,8 +1,8 @@
 import React from "react";
 
-function PageLayout({ title, subtitle, buttonText, image }) {
+function PageLayout({ title, subtitle, buttonText, image, className }) {
   return (
-    <section className="page-layout">
+    <section className={`page-layout ${className || ""}`}>
       <div className="page-text">
         <h1>{title}</h1>
         <p>{subtitle}</p>
