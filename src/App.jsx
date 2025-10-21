@@ -60,7 +60,7 @@ function App() {
             <NavPage
               title="Anxiety and stress relief whenever you need it"
               subtitle="Learn how to calm anxiety and find the tools for in-the-moment stress relief. Our clinical experts and meditation teachers are here with a wide range of stress relief programs, meditations for anxiety, and guided content to help you soothe anxiety and feel better."
-              buttonText="Relax now"
+              buttonText="Relieve your stress for free"
               image={stressImg}
               className="stress-page"
               onButtonClick={() => setShowSignup(true)}
@@ -72,8 +72,8 @@ function App() {
           element={
             <NavPage
               title="Mindfulness, meditation and guided programs to build healthy habits that will last a lifetime"
-              subtitle="You're in the right place. Calm puts the tools to achieve mindfulness in your back pocket with guided meditations, soothing music, and daily guided programs designed to fit into your lifestyle in practical ways.."
-              buttonText="Practice mindfulness"
+              subtitle="You're in the right place. Calm puts the tools to achieve mindfulness in your back pocket with guided meditations, soothing music, and daily guided programs designed to fit into your lifestyle in practical ways."
+              buttonText="Live mindfully for free"
               image={mindfulnessImg}
               className="mindfulness-page"
               onButtonClick={() => setShowSignup(true)}
