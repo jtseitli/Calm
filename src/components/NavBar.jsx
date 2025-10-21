@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 
-function NavBar({ onLoginClick }) {
+function NavBar({ onLoginClick, onSignupClick }) {
   const location = useLocation();
   const isLanding = location.pathname === "/";
 
@@ -18,7 +18,7 @@ function NavBar({ onLoginClick }) {
       </div>
       <div className="nav-right">
         <button className="nav-btn" onClick={onLoginClick}>Log In</button>
-        <button className="primary-btn" onClick={onLoginClick}>Try Calm for Free</button>
+        <button className="primary-btn" onClick={onSignupClick}>Try Calm for Free</button>
       </div>
     </nav>
   );

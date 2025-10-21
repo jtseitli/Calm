@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Routes, Route } from "react-router-dom"; 
+import { Routes, Route, useLocation } from "react-router-dom"; 
 import NavBar from "./components/NavBar";
 import LoginModal from "./components/LoginModal";
 import SignupModal from "./components/SignupModal";
@@ -12,10 +12,24 @@ import mindfulnessImg from "./assets/midfulness.jpeg";
 function App() {
   const [showLogin, setShowLogin] = useState(false);  
   const [showSignup, setShowSignup] = useState(false); 
+  const location = useLocation();
+
+
+  const pageBackgrounds = {
+    "/": "#fff",
+    "/sleep": "#E2E2E7",
+    "/stress": "#E2E5EA",
+    "/mindfulness": "#E3E7E4",
+  };
+
+  const currentBackground = pageBackgrounds[location.pathname] || "#fff";
 
   return (
-    <div className="app">
-      <NavBar onLoginClick={() => setShowLogin(true)} />
+    <div className="app" style={{ backgroundColor: currentBackground }}>
+      <NavBar 
+        onLoginClick={() => setShowLogin(true)} 
+        onSignupClick={() => setShowSignup(true)} 
+      />
 
       <Routes>
         <Route
@@ -35,7 +49,8 @@ function App() {
               subtitle="Join millions of sound sleepers worldwide. Fall asleep easily and naturally with our Sleep Stories, sleep meditations, exclusive sleep music and sleep sounds. With hundreds of titles to choose from, you'll be drifting off to dreamland in no time. Just press play and drift away."
               buttonText="Sleep better for free"
               image={sleepImg}
-              className="sleep-page" 
+              className="sleep-page"
+              onButtonClick={() => setShowSignup(true)}
             />
           }
         />
@@ -43,11 +58,12 @@ function App() {
           path="/stress"
           element={
             <NavPage
-              title="Reduce stress and find your calm"
-              subtitle="Discover guided meditations and breathing exercises designed to help you stay balanced, even in stressful moments."
+              title="Anxiety and stress relief whenever you need it"
+              subtitle="Learn how to calm anxiety and find the tools for in-the-moment stress relief. Our clinical experts and meditation teachers are here with a wide range of stress relief programs, meditations for anxiety, and guided content to help you soothe anxiety and feel better."
               buttonText="Relax now"
               image={stressImg}
-              className="stress-page" 
+              className="stress-page"
+              onButtonClick={() => setShowSignup(true)}
             />
           }
         />
@@ -55,11 +71,12 @@ function App() {
           path="/mindfulness"
           element={
             <NavPage
-              title="Be more mindful every day"
-              subtitle="Learn to focus, stay present, and find joy in everyday life with guided mindfulness sessions."
+              title="Mindfulness, meditation and guided programs to build healthy habits that will last a lifetime"
+              subtitle="You're in the right place. Calm puts the tools to achieve mindfulness in your back pocket with guided meditations, soothing music, and daily guided programs designed to fit into your lifestyle in practical ways.."
               buttonText="Practice mindfulness"
               image={mindfulnessImg}
-              className="mindfulness-page" 
+              className="mindfulness-page"
+              onButtonClick={() => setShowSignup(true)}
             />
           }
         />
